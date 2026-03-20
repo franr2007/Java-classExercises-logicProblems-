@@ -9,27 +9,21 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         System.out.println("Entrada");
         int n = sc.nextInt();
-        int j = 0;
-        while (j == 0) {
-            if (n <= 0) {
-                System.out.println("Tiene que ser un numero positivo o > que 0");
-                n = sc.nextInt();
-            } else {
-                j++;
+        int suma=0;
+        
+        for(int i=1; i<n;i++){
+            if (n%i==0) {
+                suma+=i;
             }
         }
-        int suma = 0;
-        for (int i = 1; i < n; i++) {
-            suma = suma + i;
-            if (suma == n) {
-                i = n;
-            }
+
+        if (suma==n) {
+            System.out.println("es perfecto");
         }
-        if (suma == n) {
-            System.out.println(n + " es perfecto");
-        } else {
-            System.out.println(n + " no es perfecto");
+        else{
+            System.out.println("no es perfecto");
         }
+        
         sc.close();
     }
 }
