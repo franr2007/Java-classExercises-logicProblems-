@@ -6,10 +6,12 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Entrada");
-        String n=sc.next().toString().toLowerCase();
-        for(int i=0; i<n.length();i++){
-            System.out.println(n.charAt(i));
+        String s=sc.next();
+
+        for(int i=s.length()-1;i>=0;i--){
+            System.out.print(s.charAt(i));
         }
 
+        sc.close();
     }
 }
